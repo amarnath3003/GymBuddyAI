@@ -1,60 +1,86 @@
+/* Container for the entire form */
 .Setup {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 20px;
+  padding: 40px 20px;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
+/* Row for Age, Height, Weight */
 .input-row {
   display: flex;
-  gap: 10px;
-}
-
-.input-row input {
-  width: 80px;
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #444;
-  background: #222;
-  color: white;
-}
-
-.dropdown-container {
-  display: flex;
-  flex-direction: column;
   gap: 15px;
   width: 100%;
-  max-width: 300px;
 }
 
+/* Individual group (Label + Input) */
 .input-group {
   display: flex;
   flex-direction: column;
+  gap: 8px;
+  width: 100%;
   text-align: left;
 }
 
+/* Label styling */
 .input-group label {
-  font-size: 0.8rem;
-  margin-bottom: 5px;
-  color: #aaa;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #b3b3b3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-select {
-  padding: 10px;
-  border-radius: 5px;
-  background: #222;
-  color: white;
+/* Input and Select styling */
+input, select {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 10px;
   border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 1rem;
+  outline: none;
+  box-sizing: border-box; /* Keeps padding from breaking width */
+  transition: border-color 0.2s;
 }
 
+input:focus, select:focus {
+  border-color: #d4ff00; /* Neon Lime highlight */
+}
+
+/* Container for the dropdowns below the row */
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+/* The primary action button */
 .submit-btn {
+  width: 100%;
+  padding: 16px;
   margin-top: 10px;
-  padding: 12px 30px;
-  background-color: #bbff00; /* Neon Gym Green */
-  color: black;
-  font-weight: bold;
+  background-color: #d4ff00; /* Neon Lime */
+  color: #000000;
+  font-weight: 800;
+  font-size: 1rem;
+  text-transform: uppercase;
   border: none;
-  border-radius: 25px;
+  border-radius: 50px;
   cursor: pointer;
+  transition: transform 0.1s, filter 0.2s;
+}
+
+.submit-btn:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+.submit-btn:active {
+  transform: translateY(0);
 }

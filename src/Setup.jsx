@@ -11,29 +11,38 @@ function Setup() {
 
   return (
     <div className="Setup">
-      {/* 1. Physical Stats Row */}
+      {/* 1. Physical Stats Row wrapped for spacing */}
       <div className="input-row">
-        <input 
-          type="number"
-          value={age}
-          onChange={(e) => setAge(e.target.value)}
-          placeholder="Age" 
-        />
-        <input 
-          type="number"
-          value={height}
-          onChange={(e) => setHeight(e.target.value)}
-          placeholder="Height" 
-        />
-        <input 
-          type="number"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-          placeholder="Weight" 
-        />
+        <div className="input-group">
+          <label>Age</label>
+          <input 
+            type="number"
+            value={age}
+            onChange={(e) => setAge(e.target.value)}
+            placeholder="25" 
+          />
+        </div>
+        <div className="input-group">
+          <label>Height</label>
+          <input 
+            type="number"
+            value={height}
+            onChange={(e) => setHeight(e.target.value)}
+            placeholder="cm" 
+          />
+        </div>
+        <div className="input-group">
+          <label>Weight</label>
+          <input 
+            type="number"
+            value={weight}
+            onChange={(e) => setWeight(e.target.value)}
+            placeholder="kg" 
+          />
+        </div>
       </div>
 
-      {/* 2. Dropdown Sections */}
+      {/* 2. Dropdown Sections wrapped for alignment */}
       <div className="dropdown-container">
         <div className="input-group">
           <label>Gender</label>
